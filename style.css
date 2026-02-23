@@ -1,0 +1,901 @@
+ html {
+   font-family: Poppins, sans-serif;
+   scroll-behavior: smooth;
+ }
+
+ body {
+   margin: 0;
+   background: #ffffff;
+   color: #111;
+ }
+
+ a {
+   text-decoration: none;
+   color: inherit;
+ }
+
+ html {
+   scroll-behavior: smooth;
+ }
+
+ #faq,
+ #features,
+ #why-us,
+ #our-services,
+ #contact {
+   scroll-margin-top: 100px;
+ }
+
+
+
+
+
+ /* ================= ROOT ================= */
+ :root {
+   --primary: #00bcd4;
+   --dark: #0f172a;
+   --gray: #64748b;
+   --light: #f8fafc;
+   --white: #ffffff;
+ }
+
+ /* ================= RESET ================= */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   font-family: Poppins, sans-serif;
+   background: var(--white);
+   color: var(--dark);
+   line-height: 1.6;
+
+   /* Offset for fixed header */
+   padding-top: 90px;
+ }
+
+ @media (max-width: 768px) {
+   body {
+     padding-top: 75px;
+   }
+ }
+
+
+
+ /* ================= BUTTONS ================= */
+ .button {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 12px 22px;
+   border-radius: 8px;
+   font-weight: 600;
+   background: var(--light);
+   color: var(--dark);
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
+
+ .button:hover {
+   transform: translateY(-2px);
+ }
+
+ .button-main {
+   background: var(--primary);
+   color: #fff;
+ }
+
+ /* ================= STICKY HEADER (DESKTOP + MOBILE) ================= */
+
+ .home-thq-navbar-elm {
+   position: fixed;
+   /* PIN HEADER */
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+   background: #ffffff;
+   padding: 16px 8%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+ }
+
+
+ .home-thq-left-elm1 {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+ }
+
+ /* Navbar logo – desktop */
+ .home-thq-left-elm1 img {
+   height: 70px;
+   /* increase logo size */
+   width: auto;
+ }
+
+ @media (max-width: 768px) {
+   .home-thq-left-elm1 img {
+     height: 55px;
+   }
+ }
+
+ .home-thq-links-elm {
+   display: flex;
+   gap: 24px;
+ }
+
+ .home-thq-links-elm a {
+   font-weight: 500;
+   color: var(--dark);
+ }
+
+ .home-thq-links-elm a:hover {
+   color: var(--primary);
+ }
+
+ .home-thq-right-elm {
+   display: flex;
+   gap: 16px;
+ }
+
+ /* ================= HERO ================= */
+
+
+ /* Hero title */
+ .hero-title {
+   font-size: 44px;
+   line-height: 1.2;
+   margin-bottom: 20px;
+   color: #0f172a;
+ }
+
+ /* Aqua color */
+ .text-aqua {
+   color: #00bcd4;
+ }
+
+
+ /* Mobile adjustment */
+ @media (max-width: 768px) {
+   .hero-title {
+     font-size: 32px;
+     line-height: 1.3;
+   }
+ }
+
+ .home-thq-hero-elm {
+   padding: 90px 8%;
+   background: linear-gradient(135deg, #e0f7fa, #ffffff);
+ }
+
+ .home-thq-main-elm {
+   display: grid;
+   grid-template-columns: 1.1fr 1fr;
+   gap: 60px;
+   align-items: center;
+ }
+
+ .home-thq-content-elm1 h1 {
+   font-size: 44px;
+   line-height: 1.2;
+   margin-bottom: 20px;
+ }
+
+ .home-thq-content-elm1 p {
+   color: var(--gray);
+   font-size: 18px;
+   margin-bottom: 30px;
+ }
+
+ .home-thq-image-elm img {
+   max-width: 100%;
+   border-radius: 16px;
+ }
+
+ /* ================= FEATURES ================= */
+ .home-thq-features-elm1 {
+   padding: 80px 8%;
+   background: var(--light);
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px;
+ }
+
+ .features-box {
+   background: var(--white);
+   padding: 30px;
+   border-radius: 16px;
+   box-shadow: 0 10px 30px rgba(17, 148, 208, 0.851);
+   transition: 0.3s;
+ }
+
+ .features-box:hover {
+   transform: translateY(-8px);
+ }
+
+ .features-box h2 {
+   color: var(--primary);
+   margin-bottom: 12px;
+ }
+
+ .features-box p {
+   color: var(--gray);
+ }
+
+ /* ================= WHY CHOOSE ================= */
+ .home-thq-why-elm {
+   padding: 90px 8%;
+   text-align: center;
+ }
+
+ .home-thq-why-elm h2 {
+   font-size: 36px;
+   margin-bottom: 20px;
+ }
+
+ .home-thq-why-elm p {
+   max-width: 700px;
+   margin: auto;
+   color: var(--gray);
+ }
+
+ /* ================= OUR SERVICES ================= */
+
+ .features7-wrapper {
+   padding: 80px 8%;
+   background: #ffffff;
+ }
+
+ /* Heading */
+ .services-title {
+   text-align: center;
+   font-size: 36px;
+   margin-bottom: 50px;
+   color: #0f172a;
+ }
+
+ /*  DESKTOP: FORCE 3 IN ONE ROW */
+ .services-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   /* ALWAYS 3 on desktop */
+   gap: 30px;
+ }
+
+ /* Service cards */
+ .service-box {
+   background: #f8fafc;
+   padding: 30px;
+   border-radius: 16px;
+   text-align: center;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+   transition: transform 0.3s ease, background 0.3s ease;
+ }
+
+ .service-box h3 {
+   color: #00bcd4;
+   margin-bottom: 12px;
+ }
+
+ .service-box p {
+   color: #64748b;
+ }
+
+ /* Hover (desktop only) */
+ @media (hover: hover) {
+   .service-box:hover {
+     transform: translateY(-8px);
+     background: #00bcd4;
+   }
+
+   .service-box:hover h3,
+   .service-box:hover p {
+     color: #ffffff;
+   }
+ }
+
+ /* ================= MOBILE & TABLET ================= */
+
+ /* Tablet & Mobile → STACK */
+ @media (max-width: 900px) {
+   .services-grid {
+     grid-template-columns: 1fr;
+     /* 1 per row */
+   }
+ }
+
+ /* ================= RESPONSIVE ================= */
+
+ /* Tablet & mobile */
+ @media (max-width: 900px) {
+   .services-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .services-title {
+     font-size: 30px;
+     margin-bottom: 35px;
+   }
+
+   .features7-wrapper {
+     padding: 60px 5%;
+   }
+ }
+
+
+ /* ================= RESPONSIVE ================= */
+ @media (max-width: 900px) {
+   .services-grid {
+     grid-template-columns: 1fr;
+   }
+ }
+
+
+ /* ================= CONTACT ================= */
+ .home-thq-schedule-elm {
+   padding: 90px 8%;
+   background: linear-gradient(135deg, #00bcd4, #0097a7);
+   color: #fff;
+   text-align: center;
+ }
+
+ .home-thq-schedule-elm h2 {
+   font-size: 36px;
+   margin-bottom: 15px;
+ }
+
+ .home-thq-schedule-elm p {
+   max-width: 650px;
+   margin: 0 auto 30px;
+   opacity: 0.95;
+ }
+
+ .home-thq-schedule-elm a {
+   margin: 10px;
+ }
+
+ /* ================= FOOTER ================= */
+ .home-thq-footer-elm {
+   padding: 50px 8%;
+   background: var(--dark);
+   color: #cbd5e1;
+   text-align: center;
+ }
+
+ .home-thq-footer-elm img {
+   height: 50px;
+   margin-bottom: 15px;
+ }
+
+ .home-thq-footer-elm p {
+   max-width: 500px;
+   margin: 10px auto;
+   font-size: 14px;
+ }
+
+ .contact-email a {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   color: #00bcd4;
+   font-weight: 600;
+ }
+
+ .mail-icon {
+   width: 22px;
+   height: 22px;
+   color: #00bcd4;
+ }
+
+ .contact-email a:hover {
+   text-decoration: underline;
+ }
+
+
+ /* ================= RESPONSIVE ================= */
+ @media (max-width: 900px) {
+   .home-thq-main-elm {
+     grid-template-columns: 1fr;
+     text-align: center;
+   }
+
+   .home-thq-features-elm1,
+   .features7-wrapper>div {
+     grid-template-columns: 1fr;
+   }
+
+   .home-thq-links-elm {
+     display: none;
+   }
+ }
+
+
+
+
+ /* ================= WHATSAPP BUTTON (SAFE FIX) ================= */
+
+ .button.whatsapp {
+   background: #25D366;
+   color: #ffffff;
+   border-radius: 8px;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   padding: 12px 22px;
+   transition: all 0.3s ease;
+ }
+
+ /* WhatsApp icon */
+ .button.whatsapp::before {
+   content: "";
+   width: 20px;
+   height: 20px;
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   display: inline-block;
+ }
+
+ .button.whatsapp:hover {
+   background: #1ebe5d;
+   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+ }
+
+
+
+ /* Footer logo – desktop */
+ .home-thq-footer-elm img {
+   height: 90px;
+   width: auto;
+ }
+
+ /* Footer logo – mobile */
+ @media (max-width: 600px) {
+   .home-thq-footer-elm img {
+     height: 65px;
+   }
+ }
+
+
+ html {
+   scroll-behavior: smooth;
+ }
+
+ /* ================= BRANDS (5 PER ROW – CLEAR) ================= */
+
+ .brand-section {
+   padding: 90px 8%;
+   background: linear-gradient(135deg, #f0fbff, #ffffff);
+   text-align: center;
+ }
+
+ .brand-title {
+   font-size: 36px;
+   margin-bottom: 50px;
+   color: #0f172a;
+ }
+
+ /* EXACTLY 5 LOGOS PER ROW */
+ .brand-grid {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 30px;
+   align-items: center;
+ }
+
+ /* Brand logo cards */
+ .brand-grid img {
+   background: #ffffff;
+   padding: 20px;
+   border-radius: 14px;
+   width: 100%;
+   max-width: 160px;
+   /* makes logo clear */
+   height: 80px;
+   /* fixed height for clarity */
+   object-fit: contain;
+   margin: auto;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+   transition: all 0.3s ease;
+ }
+
+ /* Hover = float only (no color change) */
+ .brand-grid img:hover {
+   transform: translateY(-10px) scale(1.05);
+   box-shadow: 0 18px 40px rgba(0, 188, 212, 0.35);
+ }
+
+ /* Tablet */
+ @media (max-width: 1100px) {
+   .brand-grid {
+     grid-template-columns: repeat(3, 1fr);
+   }
+ }
+
+ /* Mobile */
+ @media (max-width: 600px) {
+   .brand-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }
+
+ /* ================= MOBILE OPTIMIZATION ================= */
+
+ /* Prevent horizontal scroll */
+ html,
+ body {
+   overflow-x: hidden;
+ }
+
+ /* Improve touch scrolling */
+ body {
+   -webkit-overflow-scrolling: touch;
+ }
+
+ /* Better tap response */
+ a,
+ button {
+   touch-action: manipulation;
+ }
+
+ /* Reduce heavy animations on mobile */
+ @media (max-width: 768px) {
+
+   /* Header spacing */
+   .home-thq-navbar-elm {
+     padding: 14px 5%;
+   }
+
+   /* Hide desktop menu */
+   .home-thq-links-elm {
+     display: none;
+   }
+
+   /* Hero section */
+   .home-thq-hero-elm {
+     padding: 60px 5%;
+   }
+
+   .home-thq-main-elm {
+     grid-template-columns: 1fr;
+     gap: 40px;
+     text-align: center;
+   }
+
+   .home-thq-content-elm1 h1 {
+     font-size: 32px;
+     line-height: 1.3;
+   }
+
+   .home-thq-content-elm1 p {
+     font-size: 16px;
+   }
+
+   /* Images scale smoothly */
+   img {
+     max-width: 100%;
+     height: auto;
+   }
+
+   /* Features & services */
+   .home-thq-features-elm1,
+   .services-grid {
+     grid-template-columns: 1fr;
+   }
+
+   /* Reduce hover animation load */
+   .features-box:hover,
+   .service-box:hover,
+   .brand-grid img:hover {
+     transform: none;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+   }
+
+   /* Brands section mobile */
+   .brand-grid {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+   }
+
+   .brand-grid img {
+     max-width: 140px;
+     height: 70px;
+   }
+
+   /* Contact section */
+   .home-thq-schedule-elm {
+     padding: 60px 5%;
+   }
+
+   /* Footer */
+   .home-thq-footer-elm {
+     padding: 40px 5%;
+   }
+ }
+
+ /* ================= PERFORMANCE BOOST ================= */
+
+ /* GPU acceleration for smooth animations */
+ .home-thq-main-elm,
+ .features-box,
+ .service-box,
+ .brand-grid img,
+ .whatsapp-float {
+   will-change: transform;
+ }
+
+ /* ================= MOBILE MENU ================= */
+
+ .mobile-menu-icon {
+   display: none;
+   font-size: 28px;
+   cursor: pointer;
+   margin-left: auto;
+   /* FIX: pushes icon to right */
+   line-height: 1;
+   /* FIX: keeps icon centered */
+ }
+
+
+ /* Mobile menu container */
+ .mobile-menu {
+   display: none;
+   flex-direction: column;
+   background: #ffffff;
+   position: fixed;
+   top: 75px;
+   /* BELOW HEADER */
+   left: 0;
+   width: 100%;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   z-index: 999;
+ }
+
+
+ .mobile-menu a {
+   padding: 18px;
+   text-align: center;
+   border-bottom: 1px solid #e5e7eb;
+   font-weight: 600;
+ }
+
+ /* Show on mobile */
+ @media (max-width: 900px) {
+
+   .home-thq-links-elm,
+   .home-thq-right-elm {
+     display: none;
+   }
+
+   .mobile-menu-icon {
+     display: block;
+   }
+ }
+
+ section {
+   scroll-margin-top: 90px;
+ }
+
+ @media (max-width: 768px) {
+   section {
+     scroll-margin-top: 75px;
+   }
+ }
+
+
+ /* ================= MOBILE FLOATING SVG BUTTONS ================= */
+
+ /* Hidden on desktop */
+ .mobile-float-actions {
+   display: none;
+ }
+
+ /* Mobile only */
+ @media (max-width: 768px) {
+   .mobile-float-actions {
+     display: flex;
+     flex-direction: column;
+     gap: 14px;
+     position: fixed;
+     bottom: 20px;
+     right: 16px;
+     z-index: 9999;
+   }
+
+   .mobile-float-actions a {
+     width: 56px;
+     height: 56px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #ffffff;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+     position: relative;
+     animation: pulse 2s infinite;
+   }
+
+   .mobile-float-actions svg {
+     width: 26px;
+     height: 26px;
+     fill: currentColor;
+   }
+
+   .mobile-float-call {
+     background: #2563eb;
+   }
+
+   .mobile-float-whatsapp {
+     background: #25D366;
+     animation-delay: 0.6s;
+   }
+ }
+
+
+ /* ================= PULSE ANIMATION ================= */
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+   }
+
+   70% {
+     box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+   }
+
+   100% {
+     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+   }
+ }
+
+ /* ================= CONTACT WHATSAPP BUTTON ================= */
+
+ /* WhatsApp button in Contact section */
+ #contact a[href*="wa.me"] {
+   background: #25D366;
+   /* WhatsApp Green */
+   color: #ffffff;
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-weight: 600;
+ }
+
+ /* WhatsApp icon */
+ #contact a[href*="wa.me"]::before {
+   content: "";
+   width: 22px;
+   height: 22px;
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   display: inline-block;
+ }
+
+ /* Hover effect */
+ #contact a[href*="wa.me"]:hover {
+   background: #1ebe5d;
+   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+ }
+
+ /* ================= NATIVE LOGO LAST & CENTER (MOBILE) ================= */
+
+ @media (max-width: 600px) {
+
+   /* Ensure 2 columns on mobile */
+   .brand-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+   /* Move Native logo to LAST */
+   .brand-native {
+     order: 99;
+     /* pushes it to the end */
+     grid-column: 1 / -1;
+     /* full width row */
+     justify-self: center;
+     /* center horizontally */
+     max-width: 160px;
+   }
+ }
+
+ /* ================= CLICK FAQ ACCORDION ================= */
+
+ .faq-section {
+   max-width: 900px;
+   margin: 90px auto;
+   padding: 0 20px;
+ }
+
+ .faq-section h2 {
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 35px;
+   color: #0a3d62;
+ }
+
+ /* FAQ Item */
+ .faq-item {
+   background: #ffffff;
+   border-radius: 14px;
+   margin-bottom: 15px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+   overflow: hidden;
+ }
+
+ /* Hide checkbox */
+ .faq-item input {
+   display: none;
+ }
+
+ /* Question */
+ .faq-item label {
+   display: block;
+   padding: 20px 25px;
+   font-size: 1.1rem;
+   font-weight: 600;
+   color: #0077b6;
+   cursor: pointer;
+   position: relative;
+ }
+
+ /* Plus / Minus Icon */
+ .faq-item label::after {
+   content: "+";
+   position: absolute;
+   right: 25px;
+   font-size: 1.5rem;
+   transition: transform 0.3s ease;
+ }
+
+ /* Answer */
+ .faq-answer {
+   max-height: 0;
+   overflow: hidden;
+   padding: 0 25px;
+   transition: max-height 0.4s ease, padding 0.4s ease;
+ }
+
+ /* Answer Text */
+ .faq-answer p {
+   font-size: 0.95rem;
+   line-height: 1.7;
+   color: #444;
+ }
+
+ /* When Open */
+ .faq-item input:checked~.faq-answer {
+   max-height: 300px;
+   padding: 0 25px 20px;
+ }
+
+ .faq-item input:checked+label::after {
+   content: "–";
+ }
+
+ /* Hover Effect */
+ .faq-item label:hover {
+   background: #f0fbff;
+ }
+
+ /* Mobile */
+ @media (max-width: 600px) {
+   .faq-section h2 {
+     font-size: 1.6rem;
+   }
+
+   .faq-item label {
+     font-size: 1rem;
+     padding: 16px 20px;
+   }
+ }
+
+ #faq {
+   scroll-margin-top: 100px;
+ }
